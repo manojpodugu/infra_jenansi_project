@@ -56,8 +56,8 @@ resource "aws_instance" "example" {
   instance_type          = "t2.micro"
   subnet_id              = data.aws_subnet_ids.default.ids[count.index]
   vpc_security_group_ids = [aws_security_group.allow_all.id]
-  key_name               = "your-key-pair-name" # Replace with your actual key name
-user_data =  "${file("apache.sh")}"
+  key_name               = "stark" # Replace with your actual key name
+user_data =  "${file("script.sh")}"
    tags = {
     Name = "AmazonLinux2-${count.index}"
   }
