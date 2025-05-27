@@ -28,12 +28,12 @@ data "aws_vpc" "default" {
  # vpc_id = data.aws_vpc.default.id
 #}
 
-data "aws_subnets" "default" {
-  filter {
-    name   = "vpc-id"
-    values = [var.vpc_id]
-  }
-}
+#data "aws_subnets" "default" {
+ # filter {
+  #  name   = "vpc-id"
+   # values = [var.vpc_id]
+  #}
+#}
 
 
 # Security Group that allows all traffic (not recommended for production)
