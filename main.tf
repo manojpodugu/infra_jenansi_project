@@ -70,7 +70,9 @@ resource "aws_s3_bucket" "general_bucket" {
     Environment = "Dev"
   }
 }
-
+output "s3_bucket_name" {
+  value = aws_s3_bucket.general_bucket.bucket
+}
 
 
 # Output instance public IPs
