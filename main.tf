@@ -53,7 +53,7 @@ resource "aws_instance" "example" {
   key_name               = "stark" # Replace with your actual key name
 user_data =  "${file("script.sh")}"
    tags = {
-    Name = "AmazonLinux-${count.index}+1"
+    Name = "AmazonLinux-${count.index+1}"
   }
 }
 
