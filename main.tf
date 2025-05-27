@@ -62,7 +62,7 @@ resource "aws_instance" "example" {
   count                  = 2
   ami                    = data.aws_ami.amazon_linux_2.id
   instance_type          = "t2.micro"
-  subnet_id              = data.aws_subnets.default.ids[count.index]
+  #subnet_id              = data.aws_subnets.default.ids[count.index]
   vpc_security_group_ids = [aws_security_group.allow_all.id]
   key_name               = "stark" # Replace with your actual key name
 user_data =  "${file("script.sh")}"
