@@ -46,7 +46,7 @@ resource "aws_security_group" "allow_all" {
 
 # Create two EC2 instances and run a shell script on boot
 resource "aws_instance" "example" {
-  count                  = 2
+  count                  = 3
   ami                    = data.aws_ami.amazon_linux_2.id
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.allow_all.id]
