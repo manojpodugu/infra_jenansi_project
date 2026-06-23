@@ -67,7 +67,7 @@ resource "aws_s3_bucket" "general_bucket" {
 
   tags = {
     Name        = "GeneralBucket"
-    Environment = "Dev"
+  
   }
 }
 output "s3_bucket_name" {
